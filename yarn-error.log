@@ -1,30 +1,21 @@
 Arguments: 
-  /usr/local/bin/node /Users/anishleekkala/.yarn/bin/yarn.js install
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.15.2/libexec/bin/yarn.js install
 
 PATH: 
-  /Users/anishleekkala/.yarn/bin:/Users/anishleekkala/.config/yarn/global/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/mongodb-osx-x86_64-4.0.10/bin:./node_modules/.bin:/usr/local/mongodb/bin
 
 Yarn version: 
-  1.22.4
+  1.15.2
 
 Node version: 
-  14.6.0
+  10.15.0
 
 Platform: 
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@react-navigation: Request "https://registry.yarnpkg.com/@react-navigation" returned a 405
-      at Request.params.callback [as _callback] (/Users/anishleekkala/.yarn/lib/cli.js:66996:18)
-      at Request.self.callback (/Users/anishleekkala/.yarn/lib/cli.js:140748:22)
-      at Request.emit (events.js:314:20)
-      at Request.<anonymous> (/Users/anishleekkala/.yarn/lib/cli.js:141720:10)
-      at Request.emit (events.js:314:20)
-      at IncomingMessage.<anonymous> (/Users/anishleekkala/.yarn/lib/cli.js:141642:12)
-      at Object.onceWrapper (events.js:420:28)
-      at IncomingMessage.emit (events.js:326:22)
-      at endReadableNT (_stream_readable.js:1244:12)
-      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+  Error: getaddrinfo ENOTFOUND npme.walmart.com npme.walmart.com:443
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:57:26)
 
 npm manifest: 
   {
@@ -37,23 +28,15 @@ npm manifest:
       "eject": "expo eject"
     },
     "dependencies": {
-      "@react-navigation": "4.4.0",
-      "@react-navigation/native": "^5.7.2",
-      "expo": "~38.0.8",
-      "expo-status-bar": "^1.0.2",
-      "react": "~16.11.0",
-      "react-dom": "~16.11.0",
-      "react-native": "0.63",
-      "react-native-web": "~0.11.7",
-      "react-native-gesture-handler": "~1.6.0",
-      "react-native-reanimated": "~1.9.0",
-      "react-native-screens": "~2.9.0",
-      "react-native-safe-area-context": "~3.0.7",
-      "@react-native-community/masked-view": "0.1.10"
+      "expo": "^33.0.0",
+      "react": "16.8.3",
+      "react-dom": "^16.8.6",
+      "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
+      "react-native-web": "^0.11.4",
+      "yarn": "^1.17.3"
     },
     "devDependencies": {
-      "@babel/core": "^7.8.6",
-      "babel-preset-expo": "~8.1.0"
+      "babel-preset-expo": "^5.1.1"
     },
     "private": true
   }

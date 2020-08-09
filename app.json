@@ -1,9 +1,15 @@
 {
   "expo": {
-    "name": "rn-first-app",
-    "slug": "rn-first-app",
+    "name": "Congressional",
+    "slug": "Congressional",
     "version": "1.0.0",
     "orientation": "portrait",
+    "sdkVersion": "33.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
@@ -18,10 +24,6 @@
     ],
     "ios": {
       "supportsTablet": true
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "description": ""
+    }
   }
 }
