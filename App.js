@@ -86,7 +86,7 @@ export default class App extends Component {
             alignItems: "center",
           }}
         >
-          Please type any other things we want to know about you below:
+          Please type any other things we want to know about you below:-
         </Text>
         <TextInput
           ref={this.ExtraInfo}
