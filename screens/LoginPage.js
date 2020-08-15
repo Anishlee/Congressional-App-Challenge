@@ -18,6 +18,7 @@ export default class LoginPage extends Component {
       userNameError: null,
       passWordError: null,
       userNameAndPasswordError: null,
+      inValidUser: null,
     };
   }
   toggleModal(visible) {
@@ -37,14 +38,7 @@ export default class LoginPage extends Component {
         return Username == item.userName && Password == item.password;
       });
       if (searchCredentials.length == 0) {
-        if (Username) {
-          this.setState({ userNameError: "" });
-          this.setState({ passWordError: "" });
-        } else if (Username) {
-          this.setState({ userNameError: "" });
-        } else {
-          this.setState({ passWordError: "" });
-        }
+        this.setState({ inValidUser: "" });
       } else {
         this.props.navigation.navigate("HomePage");
         return true;
@@ -67,6 +61,7 @@ export default class LoginPage extends Component {
               return {
                 typedText: text,
                 UserName: text,
+                inValidUser: undefined,
                 //userNameAndPasswordError: text,
                 //userNameError: text,
               };
@@ -76,18 +71,9 @@ export default class LoginPage extends Component {
         {this.state.UserName === "" && (
           <Text style={styles.errorText}>Please enter a Username</Text>
         )}
-        {this.state.userNameError === "" && this.state.userName != "" && (
-          <Text style={styles.errorText}>
-            You have entered your username incorrectly
-          </Text>
+        {this.state.inValidUser === "" && (
+          <Text style={styles.errorText}>Your credentials are incorrect</Text>
         )}
-        {this.state.userNameAndPasswordError === "" &&
-          this.state.passWordError === "" &&
-          this.state.userNameError === "" && (
-            <Text style={styles.errorText}>
-              You have entered your username incorrectly
-            </Text>
-          )}
         <Text style={styles.subheadingStyle}>Password</Text>
         <TextInput
           style={styles.passwordstyle}
@@ -100,6 +86,7 @@ export default class LoginPage extends Component {
               return {
                 typedPassword: text,
                 PassWord: text,
+                inValidUser: undefined,
                 //userNameAndPasswordError: text,
                 //passWordError: text,
               };
@@ -109,18 +96,9 @@ export default class LoginPage extends Component {
         {this.state.PassWord === "" && (
           <Text style={styles.errorText}>Please enter a Password</Text>
         )}
-        {this.state.passWordError === "" && this.state.PassWord != "" && (
-          <Text style={styles.errorText}>
-            You have entered your password incorrectly
-          </Text>
+        {this.state.inValidUser === "" && (
+          <Text style={styles.errorText}>Your credentials are incorrect</Text>
         )}
-        {this.state.userNameAndPasswordError === "" &&
-          this.state.passWordError === "" &&
-          this.state.userNameError === "" && (
-            <Text style={styles.errorText}>
-              You have entered your password incorrectly
-            </Text>
-          )}
         <Button
           title="Submit"
           onPress={() =>
@@ -130,31 +108,13 @@ export default class LoginPage extends Component {
             )
           }
         ></Button>
-        <Modal visible={this.state.modalVisible}>
-          <View>
-            <Text style={styles.Text}>
-              You have typed either the username or password wrong. Are you a
-              new user?
-            </Text>
-            <View style={styles.ButtonContainer}>
-              <Button
-                title="YES"
-                color="blue"
-                onPress={() => {
-                  this.props.navigation.navigate("CreateAccount");
-                  this.toggleModal(!this.state.modalVisible);
-                }}
-              />
-              <Button
-                title="NO"
-                color="red"
-                onPress={() => {
-                  this.toggleModal(!this.state.modalVisible);
-                }}
-              />
-            </View>
-          </View>
-        </Modal>
+        <View style={styles.ButtonContainer}>
+          <Text style={{ fontSize: 18, marginRight: 10 }}> New to app? </Text>
+          <Button
+            title="Create an account"
+            onPress={() => this.props.navigation.navigate("CreateAccount")}
+          />
+        </View>
       </View>
     );
   }
@@ -196,26 +156,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 5,
   },
-  modalContainer: {
-    justifyContent: "center",
-    backgroundColor: "grey",
-    margin: 0,
-  },
-  Text: {
-    marginTop: 300,
-    fontSize: 22.5,
-    fontWeight: "bold",
-    marginBottom: 10,
-    justifyContent: "center",
-    textAlign: "center",
-    alignItems: "center",
-  },
   ButtonContainer: {
     flexDirection: "row",
     justifyContent: "space-around",
     width: "60%",
     alignItems: "center",
-    marginLeft: 75,
+    marginLeft: 80,
   },
   errorText: {
     color: "red",
