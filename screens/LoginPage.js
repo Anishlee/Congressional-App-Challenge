@@ -1,7 +1,20 @@
 import React, { Component } from "react";
-import { TextInput, View, Text, StyleSheet, Button, Modal } from "react-native";
+import { TextInput, View, Text, StyleSheet, Button } from "react-native";
 
-import Credentials from "../Database/sampledatabase";
+Credentials = [
+  {
+    userName: "Anish",
+    password: "abcdefgh",
+    email: "",
+    type: "User",
+  },
+  {
+    userName: "Aryan",
+    password: "abcdef",
+    email: "",
+    type: "Volunteer",
+  },
+];
 export default class LoginPage extends Component {
   state = {
     isLoading: true,
@@ -40,21 +53,34 @@ export default class LoginPage extends Component {
       if (searchCredentials.length == 0) {
         this.setState({ inValidUser: "" });
       } else {
-        this.props.navigation.navigate("HomePage");
+        this.props.navigation.navigate("Dashboard");
         return true;
       }
     }
   }
-
+  /*<Text style={styles.subheadingStyle}>
+          User Name: {JSON.stringify(USERNAME)}
+        </Text>
+        <Text style={styles.subheadingStyle}>
+          Password: {JSON.stringify(PASSWORD)}
+        </Text>*/
   render() {
+    const NAME = this.props.navigation.getParam("Name", "value");
+    const USERNAME = this.props.navigation.getParam("userName", "value");
+    const PASSWORD = this.props.navigation.getParam("password", "value");
+    const newCredentials = {
+      userName: USERNAME,
+      password: PASSWORD,
+    };
+    Credentials.push(NAME, newCredentials);
     return (
       <View>
-        <Text style={styles.titleStyle}>Login</Text>
-        <Text style={styles.subheadingStyle}>Username</Text>
+        <Text style={styles.titleStyle}>User Login</Text>
+        <Text style={styles.subheadingStyle}>Username or Email</Text>
         <TextInput
           style={styles.emailstyle}
           keyboardType="email-address"
-          placeholder="Please enter your email"
+          placeholder="Please enter your Username/Email"
           placeholderTextColor="#808080"
           onChangeText={(text) => {
             this.setState((previousState) => {
@@ -77,7 +103,7 @@ export default class LoginPage extends Component {
         <Text style={styles.subheadingStyle}>Password</Text>
         <TextInput
           style={styles.passwordstyle}
-          keyboardType="default"
+          keyboardType="email-address"
           placeholder="Please enter your password"
           placeholderTextColor="#808080"
           secureTextEntry={true}
