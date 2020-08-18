@@ -34,9 +34,6 @@ export default class LoginPage extends Component {
       inValidUser: null,
     };
   }
-  toggleModal(visible) {
-    this.setState({ modalVisible: visible });
-  }
   checkForCredentials(Username, Password) {
     let UserName = this.state.UserName;
     let PassWord = this.state.PassWord;
@@ -66,6 +63,7 @@ export default class LoginPage extends Component {
         </Text>*/
   render() {
     const NAME = this.props.navigation.getParam("Name", "value");
+    const ADDRESS = this.props.navigation.getParam("Address", "value");
     const USERNAME = this.props.navigation.getParam("userName", "value");
     const PASSWORD = this.props.navigation.getParam("password", "value");
     const newCredentials = {
