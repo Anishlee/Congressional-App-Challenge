@@ -17,11 +17,16 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "ios.ipa"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": ""
+    "description": "",
+    "android": {
+      "package": "android.apk"
+    },
+    "entryPoint": "node_modules/expo/AppEntry.js"
   }
 }
