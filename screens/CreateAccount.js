@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Button } from "react-native";
-import { TextInput } from "react-native-gesture-handler";
+import { View, Text, StyleSheet, Button, TextInput } from "react-native";
 export default class CreateAccount extends Component {
   constructor(props) {
     super(props);

@@ -10,8 +10,10 @@ import {
 
 export default class Dashboard extends Component {
   render() {
+    const LIST = this.props.navigation.getParam("List", "value");
     return (
       <View>
+        <Text style={styles.subheadingStyle}>List: {JSON.stringify(LIST)}</Text>
         <Text style={styles.titleStyle}>Dashboard</Text>
         <Button
           style={styles.StyleforButton}
