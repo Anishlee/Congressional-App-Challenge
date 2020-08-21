@@ -1,32 +1,4 @@
 {
-  "expo": {
-    "name": "rn-first-app",
-    "slug": "rn-first-app",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "ios.ipa"
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "description": "",
-    "android": {
-      "package": "android.apk"
-    },
-    "entryPoint": "node_modules/expo/AppEntry.js"
-  }
+  "name": "CongressionalAppChallengeCli",
+  "displayName": "CongressionalAppChallengeCli"
 }
