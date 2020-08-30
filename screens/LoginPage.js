@@ -1,18 +1,18 @@
-import React, {Component} from 'react';
-import {TextInput, View, Text, StyleSheet, Button} from 'react-native';
+import React, { Component } from "react";
+import { TextInput, View, Text, StyleSheet, Button } from "react-native";
 
 Credentials = [
   {
-    userName: 'Anish',
-    password: 'abcdefgh',
-    email: '',
-    type: 'User',
+    userName: "Anish",
+    password: "abcdefgh",
+    email: "",
+    type: "User",
   },
   {
-    userName: 'Aryan',
-    password: 'abcdef',
-    email: '',
-    type: 'Volunteer',
+    userName: "Aryan",
+    password: "abcdef",
+    email: "",
+    type: "Volunteer",
   },
 ];
 export default class LoginPage extends Component {
@@ -22,8 +22,8 @@ export default class LoginPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      typedText: '',
-      typedPassword: '',
+      typedText: "",
+      typedPassword: "",
       newUser: false,
       modalVisible: false,
       UserName: null,
@@ -37,24 +37,45 @@ export default class LoginPage extends Component {
   checkForCredentials(Username, Password) {
     let UserName = this.state.UserName;
     let PassWord = this.state.PassWord;
-    if (Password == '' && Username == '') {
-      this.setState({UserName: '', PassWord: ''});
-    } else if (Password == '') {
-      this.setState({PassWord: ''});
-    } else if (Username == '') {
-      this.setState({UserName: ''});
+    if (Password == "" && Username == "") {
+      this.setState({ UserName: "", PassWord: "" });
+    } else if (Password == "") {
+      this.setState({ PassWord: "" });
+    } else if (Username == "") {
+      this.setState({ UserName: "" });
     } else {
-      const searchCredentials = Credentials.filter((item) => {
-        return Username == item.userName && Password == item.password;
-      });
-      if (searchCredentials.length == 0) {
-        this.setState({inValidUser: ''});
-      } else {
-        this.props.navigation.navigate('Dashboard');
-        return true;
-      }
+      const url = `http://localhost:8080/mongo/getUserDetailsByUserNameAndPassword?username=${Username}&password=${Password}`;
+      fetch(url, {
+        method: "GET",
+      })
+        .then((response) => response.json())
+        .then((json) => {
+          this.setState({ checkCredential: json }, () => {
+            this.validateCredential(json);
+          })
+            .catch((err) => {
+              this.setState({ inValidUser: "" });
+              console.error(err);
+            })
+            .finally(() => {
+              this.setState({ fetching: false });
+            });
+        });
     }
   }
+
+  validateCredential = (checkCredential) => {
+    console.log("checkCredential", checkCredential);
+    if (
+      !checkCredential ||
+      (checkCredential && Object.keys(checkCredential).length === 0)
+    ) {
+      this.setState({ inValidUser: "" });
+    } else if (checkCredential && checkCredential.hasOwnProperty("0")) {
+      this.props.navigation.navigate("Dashboard");
+      return true;
+    }
+  };
   /*<Text style={styles.subheadingStyle}>
           User Name: {JSON.stringify(USERNAME)}
         </Text>
@@ -62,10 +83,10 @@ export default class LoginPage extends Component {
           Password: {JSON.stringify(PASSWORD)}
         </Text>*/
   render() {
-    const NAME = this.props.navigation.getParam('Name', 'value');
-    const ADDRESS = this.props.navigation.getParam('Address', 'value');
-    const USERNAME = this.props.navigation.getParam('userName', 'value');
-    const PASSWORD = this.props.navigation.getParam('password', 'value');
+    const NAME = this.props.navigation.getParam("Name", "value");
+    const ADDRESS = this.props.navigation.getParam("Address", "value");
+    const USERNAME = this.props.navigation.getParam("userName", "value");
+    const PASSWORD = this.props.navigation.getParam("password", "value");
     const newCredentials = {
       userName: USERNAME,
       password: PASSWORD,
@@ -92,10 +113,10 @@ export default class LoginPage extends Component {
             });
           }}
         />
-        {this.state.UserName === '' && (
+        {this.state.UserName === "" && (
           <Text style={styles.errorText}>Please enter a Username</Text>
         )}
-        {this.state.inValidUser === '' && (
+        {this.state.inValidUser === "" && (
           <Text style={styles.errorText}>Your credentials are incorrect</Text>
         )}
         <Text style={styles.subheadingStyle}>Password</Text>
@@ -117,10 +138,10 @@ export default class LoginPage extends Component {
             });
           }}
         />
-        {this.state.PassWord === '' && (
+        {this.state.PassWord === "" && (
           <Text style={styles.errorText}>Please enter a Password</Text>
         )}
-        {this.state.inValidUser === '' && (
+        {this.state.inValidUser === "" && (
           <Text style={styles.errorText}>Your credentials are incorrect</Text>
         )}
         <Button
@@ -128,14 +149,15 @@ export default class LoginPage extends Component {
           onPress={() =>
             this.checkForCredentials(
               this.state.typedText,
-              this.state.typedPassword,
+              this.state.typedPassword
             )
-          }></Button>
+          }
+        ></Button>
         <View style={styles.ButtonContainer}>
-          <Text style={{fontSize: 18, marginRight: 10}}> New to app? </Text>
+          <Text style={{ fontSize: 18, marginRight: 10 }}> New to app? </Text>
           <Button
             title="Create an account"
-            onPress={() => this.props.navigation.navigate('CreateAccount')}
+            onPress={() => this.props.navigation.navigate("CreateAccount")}
           />
         </View>
       </View>
@@ -148,7 +170,7 @@ const styles = StyleSheet.create({
     height: 40,
     margin: 20,
     borderTopWidth: 0,
-    borderBottomColor: 'black',
+    borderBottomColor: "black",
     borderRightWidth: 0,
     borderLeftWidth: 0,
     borderWidth: 1,
@@ -158,36 +180,36 @@ const styles = StyleSheet.create({
     height: 40,
     margin: 20,
     borderTopWidth: 0,
-    borderBottomColor: 'black',
+    borderBottomColor: "black",
     borderRightWidth: 0,
     borderLeftWidth: 0,
     borderWidth: 1,
     padding: 10,
   },
   titleStyle: {
-    color: 'black',
-    textAlign: 'center',
-    fontWeight: 'bold',
+    color: "black",
+    textAlign: "center",
+    fontWeight: "bold",
     fontSize: 40,
     marginTop: 50,
     marginBottom: 20,
   },
   subheadingStyle: {
-    color: 'black',
-    textAlign: 'center',
+    color: "black",
+    textAlign: "center",
     fontSize: 22.5,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 5,
   },
   ButtonContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    width: '60%',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "space-around",
+    width: "60%",
+    alignItems: "center",
     marginLeft: 80,
   },
   errorText: {
-    color: 'red',
+    color: "red",
     marginTop: -1,
     marginLeft: 20,
     fontSize: 15,

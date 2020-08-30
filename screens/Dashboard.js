@@ -9,7 +9,29 @@ import {
 } from "react-native";
 
 export default class Dashboard extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      data: [],
+      fetching: true,
+    };
+  }
+
+  componentDidMount() {
+    fetch("http://localhost:8080/mongo/getUserDetails")
+      .then((response) => response.json())
+      .then((json) => {
+        this.setState({ data: json })
+          .catch((err) => console.error(err))
+          .finally(() => {
+            this.setState({ fetching: false });
+          });
+      });
+  }
+
   render() {
+    const { fetching, data } = this.state;
     const LIST = this.props.navigation.getParam("List", "value");
     return (
       <View>

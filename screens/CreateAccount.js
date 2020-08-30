@@ -1,5 +1,15 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Button, TextInput } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Button,
+  TextInput,
+  ScrollView,
+  KeyboardAvoidingView,
+  Platform,
+  TouchableWithoutFeedback,
+} from "react-native";
 export default class CreateAccount extends Component {
   constructor(props) {
     super(props);
@@ -45,93 +55,111 @@ export default class CreateAccount extends Component {
   }
   render() {
     return (
-      <View>
-        <Text style={styles.titleStyle}> Create an Account </Text>
-        <Text style={styles.subheadingStyle}> Enter your Name </Text>
-        <TextInput
-          placeholder="Please enter your Name"
-          placeholderTextColor="#808080"
-          keyboardType="email-address"
-          style={styles.emailstyle}
-          onChangeText={(text) => {
-            this.setState((previousState) => {
-              return {
-                typedName: text,
-                InvalidName: text,
-              };
-            });
-          }}
-        />
-        {this.state.InvalidName == "" && (
-          <Text style={styles.errorText}>Please enter a Name</Text>
-        )}
-        <Text style={styles.subheadingStyle}> Enter your Address </Text>
-        <TextInput
-          placeholder="Please enter your Address"
-          placeholderTextColor="#808080"
-          keyboardType="email-address"
-          style={styles.emailstyle}
-          onChangeText={(text) => {
-            this.setState((previousState) => {
-              return {
-                typedAddress: text,
-                InvalidAddress: text,
-              };
-            });
-          }}
-        />
-        {this.state.InvalidAddress == "" && (
-          <Text style={styles.errorText}>Please enter a Address</Text>
-        )}
-        <Text style={styles.subheadingStyle}> Enter a Username or Email </Text>
-        <TextInput
-          placeholder="Please enter your new username"
-          keyboardType="email-address"
-          placeholderTextColor="#808080"
-          style={styles.emailstyle}
-          onChangeText={(text) => {
-            this.setState((previousState) => {
-              return {
-                typedText: text,
-                InvalidUsername: text,
-              };
-            });
-          }}
-        />
-        {this.state.InvalidUsername == "" && (
-          <Text style={styles.errorText}>Please enter a Username</Text>
-        )}
-        <Text style={styles.subheadingStyle}> Enter a Password</Text>
-        <TextInput
-          placeholder="Please enter your new password"
-          keyboardType="email-address"
-          placeholderTextColor="#808080"
-          style={styles.passwordstyle}
-          secureTextEntry={true}
-          onChangeText={(text) => {
-            this.setState((previousState) => {
-              return {
-                typedPassword: text,
-                InvalidPassword: text,
-              };
-            });
-          }}
-        />
-        {this.state.InvalidPassword == "" && (
-          <Text style={styles.errorText}>Please enter a Password</Text>
-        )}
-        <Button
-          title="Submit"
-          onPress={() =>
-            this.onPress(
-              this.state.typedName,
-              this.state.typedAddress,
-              this.state.typedText,
-              this.state.typedPassword
-            )
-          }
-        />
-      </View>
+      <KeyboardAvoidingView
+        behavior={Platform.OS === "ios" ? "padding" : null}
+        style={{ flex: 1 }}
+        keyboardVerticalOffset={100}
+        enabled
+      >
+        <ScrollView>
+          <TouchableWithoutFeedback
+            onPress={() => {
+              Keyboard.dismiss();
+            }}
+          >
+            <View>
+              <Text style={styles.titleStyle}> Create an Account </Text>
+              <Text style={styles.subheadingStyle}> Enter your Name </Text>
+              <TextInput
+                placeholder="Please enter your Name"
+                placeholderTextColor="#808080"
+                keyboardType="email-address"
+                style={styles.emailstyle}
+                onChangeText={(text) => {
+                  this.setState((previousState) => {
+                    return {
+                      typedName: text,
+                      InvalidName: text,
+                    };
+                  });
+                }}
+              />
+              {this.state.InvalidName == "" && (
+                <Text style={styles.errorText}>Please enter a Name</Text>
+              )}
+              <Text style={styles.subheadingStyle}> Enter your Address </Text>
+              <TextInput
+                placeholder="Please enter your Address"
+                placeholderTextColor="#808080"
+                keyboardType="email-address"
+                style={styles.emailstyle}
+                onChangeText={(text) => {
+                  this.setState((previousState) => {
+                    return {
+                      typedAddress: text,
+                      InvalidAddress: text,
+                    };
+                  });
+                }}
+              />
+              {this.state.InvalidAddress == "" && (
+                <Text style={styles.errorText}>Please enter a Address</Text>
+              )}
+              <Text style={styles.subheadingStyle}>
+                {" "}
+                Enter a Username or Email{" "}
+              </Text>
+              <TextInput
+                placeholder="Please enter your new username"
+                keyboardType="email-address"
+                placeholderTextColor="#808080"
+                style={styles.emailstyle}
+                onChangeText={(text) => {
+                  this.setState((previousState) => {
+                    return {
+                      typedText: text,
+                      InvalidUsername: text,
+                    };
+                  });
+                }}
+              />
+              {this.state.InvalidUsername == "" && (
+                <Text style={styles.errorText}>Please enter a Username</Text>
+              )}
+              <Text style={styles.subheadingStyle}> Enter a Password</Text>
+              <TextInput
+                placeholder="Please enter your new password"
+                keyboardType="email-address"
+                placeholderTextColor="#808080"
+                style={styles.passwordstyle}
+                secureTextEntry={true}
+                onChangeText={(text) => {
+                  this.setState((previousState) => {
+                    return {
+                      typedPassword: text,
+                      InvalidPassword: text,
+                    };
+                  });
+                }}
+              />
+              {this.state.InvalidPassword == "" && (
+                <Text style={styles.errorText}>Please enter a Password</Text>
+              )}
+              <Button
+                title="Submit"
+                onPress={() =>
+                  this.onPress(
+                    this.state.typedName,
+                    this.state.typedAddress,
+                    this.state.typedText,
+                    this.state.typedPassword
+                  )
+                }
+              />
+            </View>
+          </TouchableWithoutFeedback>
+        </ScrollView>
+      </KeyboardAvoidingView>
     );
   }
 }
