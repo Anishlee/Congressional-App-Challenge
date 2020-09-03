@@ -32,11 +32,21 @@ export default class Dashboard extends Component {
 
   render() {
     const { fetching, data } = this.state;
+    const { navigation } = this.props;
+    const {
+      state: {
+        params: {
+          navigationConfig: { userInfo },
+        },
+      },
+    } = navigation;
     const LIST = this.props.navigation.getParam("List", "value");
+    const NAME = this.props.navigation.getParam("Name", "value");
+    console.log("userInfo", JSON.stringify(userInfo));
     return (
       <View>
         <Text style={styles.subheadingStyle}>List: {JSON.stringify(LIST)}</Text>
-        <Text style={styles.titleStyle}>Dashboard</Text>
+        <Text style={styles.titleStyle}>Hello, {userInfo.name}</Text>
         <Button
           style={styles.StyleforButton}
           title="Place a New Order"
