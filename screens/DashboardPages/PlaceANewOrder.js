@@ -30,6 +30,14 @@ export default class PlaceANewOrder extends Component {
     };
   }
   onPress(List, Value, Status) {
+    const { navigation, isFocused } = this.props;
+    const {
+      state: {
+        params: {
+          navigationConfig: { userInfo },
+        },
+      },
+    } = navigation;
     const USERID = this.props.navigation.getParam("userId", "value");
     if (List.length != 0) {
       fetch("http://localhost:8080/mongo/insertUserRequest", {
@@ -43,9 +51,11 @@ export default class PlaceANewOrder extends Component {
           userId: USERID,
           orderType: Value,
           status: Status,
+          latitude: userInfo.latitude,
+          longitude: userInfo.longitude,
         }),
       });
-      this.props.navigation.navigate("Dashboard");
+      this.props.navigation.navigate("Dashboard", { updateDashboard: true });
       return true;
     } else {
       if (List.length == 0) {
@@ -75,8 +85,16 @@ export default class PlaceANewOrder extends Component {
   }
 
   render() {
+    const { navigation, isFocused } = this.props;
+    const {
+      state: {
+        params: {
+          navigationConfig: { userInfo },
+        },
+      },
+    } = navigation;
     const USERID = this.props.navigation.getParam("userId", "value");
-
+    console.log("UserInfo", JSON.stringify(userInfo));
     return (
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : null}
