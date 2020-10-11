@@ -72,9 +72,15 @@ export default class LoginPage extends Component {
     ) {
       this.setState({ inValidUser: "" });
     } else if (checkCredential && checkCredential.hasOwnProperty("0")) {
-      this.props.navigation.navigate("Dashboard", {
-        navigationConfig: { userInfo: checkCredential["0"] },
-      });
+      if (checkCredential["0"].usertype == "user") {
+        this.props.navigation.navigate("Dashboard", {
+          navigationConfig: { userInfo: checkCredential["0"] },
+        });
+      } else {
+        this.props.navigation.navigate("VolunteerDashboard", {
+          navigationConfig: { userInfo: checkCredential["0"] },
+        });
+      }
       return true;
     }
   };

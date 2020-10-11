@@ -59,9 +59,11 @@ export default class Map extends Component {
           });
       });
   };
-  onPress(orderNumber) {
-    //${userName}
-    const updateOrders = `http://localhost:8080/mongo/updateOrderStatus?OrderNumber=${orderNumber}&status=inProgress`;
+  onPress(orderNumber, volunteerName, phoneNumber) {
+    var currentdate = new Date().toLocaleString();
+
+    console.log(currentdate);
+    const updateOrders = `http://localhost:8080/mongo/updateOrderStatus?OrderNumber=${orderNumber}&status=inProgress&VolunteerName=${volunteerName}&PhoneNumber=${phoneNumber}&StartTime=${currentdate}`;
     fetch(updateOrders)
       .then((response) => response.json())
       .then((json) => {
@@ -72,7 +74,9 @@ export default class Map extends Component {
           });
       });
     console.log(this.state.updateOrder);
-    this.props.navigation.navigate("Dashboard");
+    this.props.navigation.navigate("VolunteerDashboard", {
+      orderNumber: orderNumber,
+    });
   }
   mapMarkers = () => {
     const { fetching, Orders } = this.state;
@@ -106,7 +110,9 @@ export default class Map extends Component {
             latitude: order.latitude,
             longitude: order.longitude,
           }}
-          onCalloutPress={() => this.onPress(orderNumber)}
+          onCalloutPress={() =>
+            this.onPress(orderNumber, userInfo.name, userInfo.phonenumber)
+          }
         >
           <Callout>
             <Text>{pointerDescription}</Text>

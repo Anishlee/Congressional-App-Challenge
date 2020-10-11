@@ -24,12 +24,13 @@ export default class PlaceANewOrder extends Component {
       InvalidDuration: null,
       InvalidTime: null,
       destinationAddress: "",
+      typedTime: "",
       startTime: "",
       duration: "",
       status: "Not Done",
     };
   }
-  onPress(List, Value, Status) {
+  onPress(List, Value, Status, Time) {
     const { navigation, isFocused } = this.props;
     const {
       state: {
@@ -51,6 +52,7 @@ export default class PlaceANewOrder extends Component {
           userId: USERID,
           orderType: Value,
           status: Status,
+          completedTime: Time,
           latitude: userInfo.latitude,
           longitude: userInfo.longitude,
         }),
@@ -60,6 +62,9 @@ export default class PlaceANewOrder extends Component {
     } else {
       if (List.length == 0) {
         this.setState({ InvalidList: "" });
+      }
+      if (Time.length == 0) {
+        this.setState({ InvalidTime: "" });
       }
     }
   }
@@ -173,6 +178,29 @@ export default class PlaceANewOrder extends Component {
                       });
                     }}
                   />
+                  {this.state.InvalidList == "" &&
+                    this.state.value == "Picking up Items" && (
+                      <Text style={styles.errorText}>
+                        Please type your list into the box
+                      </Text>
+                    )}
+                  <Text style={styles.subheadingStyle}>
+                    Please type when you would like the order to be completed:
+                  </Text>
+                  <TextInput
+                    placeholder="Please type your answer here"
+                    placeholderTextColor="#808080"
+                    keyboardType="email-address"
+                    style={styles.emailstyle}
+                    onChangeText={(text) => {
+                      this.setState((previousState) => {
+                        return {
+                          typedTime: text,
+                          InvalidTime: text,
+                        };
+                      });
+                    }}
+                  />
                 </View>
               )}
               {this.state.value == "2" && (
@@ -259,10 +287,10 @@ export default class PlaceANewOrder extends Component {
                   }
                 />
               )}
-              {this.state.InvalidList == "" &&
+              {this.state.InvalidTime == "" &&
                 this.state.value == "Picking up Items" && (
                   <Text style={styles.errorText}>
-                    Please type your list into the box
+                    Please type your time into the box
                   </Text>
                 )}
               {this.state.value == "Picking up Items" && (
@@ -272,7 +300,8 @@ export default class PlaceANewOrder extends Component {
                     this.onPress(
                       this.state.completedList,
                       this.state.value,
-                      this.state.status
+                      this.state.status,
+                      this.state.typedTime
                     )
                   }
                 />
@@ -295,6 +324,16 @@ const styles = StyleSheet.create({
     borderBottomColor: "black",
     borderRightWidth: 0,
     borderLeftWidth: 0,
+    borderWidth: 1,
+    padding: 10,
+  },
+  emailstyle: {
+    height: 40,
+    margin: 20,
+    borderTopWidth: 1,
+    borderBottomColor: "black",
+    borderRightWidth: 1,
+    borderLeftWidth: 1,
     borderWidth: 1,
     padding: 10,
   },

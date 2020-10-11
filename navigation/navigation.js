@@ -10,7 +10,9 @@ import PreviousOrders from "../screens/DashboardPages/PreviousOrders";
 import Profile from "../screens/DashboardPages/Profile";
 import Settings from "../screens/DashboardPages/Settings";
 import Map from "../screens/Map";
-
+import VolunteerDashboard from "../screens/VolunteerDashboard";
+import CompletedOrders from "../screens/DashboardPages/CompletedOrders";
+import CurrentOrder from "../screens/CurrentOrders";
 const AppNavigator = createStackNavigator(
   {
     LoginPage: LoginPage,
@@ -21,6 +23,9 @@ const AppNavigator = createStackNavigator(
     Profile: Profile,
     Settings: Settings,
     Map: Map,
+    VolunteerDashboard: VolunteerDashboard,
+    CompletedOrders: CompletedOrders,
+    CurrentOrder: CurrentOrder,
   },
   { initialRouteName: "LoginPage" }
 );
