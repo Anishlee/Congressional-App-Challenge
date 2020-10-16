@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* CongressionalAppChallengeCliTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CongressionalAppChallengeCliTests.m */; };
-		04BB7F3B2857AEFD7413B810 /* libPods-CongressionalAppChallengeCli-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED93ABB46A6A76FD7AF34BE /* libPods-CongressionalAppChallengeCli-tvOS.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		199513F92061734C09FB8E49 /* libPods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 006758536D3484BA1BD9907D /* libPods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* CongressionalAppChallengeCliTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CongressionalAppChallengeCliTests.m */; };
+		47289B98EBD3EC1B43F1DD5A /* libPods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2E6AA9C211451C01B041AD /* libPods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.a */; };
+		57B74E714FB733A1E5C78D96 /* libPods-CongressionalAppChallengeCli.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 053C8546DF77C4F5DAD307BB /* libPods-CongressionalAppChallengeCli.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		9082EFF098E80613A2A364EB /* libPods-CongressionalAppChallengeCli-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C10E57410807235B3143DFAF /* libPods-CongressionalAppChallengeCli-tvOSTests.a */; };
-		A7D56C95F361326E7EFE64F5 /* libPods-CongressionalAppChallengeCli.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F792B11120A0701C26B1B1 /* libPods-CongressionalAppChallengeCli.a */; };
+		CA6ED232EE5D599D654E5A82 /* libPods-CongressionalAppChallengeCli-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7146622AB54356BAF5AF1750 /* libPods-CongressionalAppChallengeCli-tvOSTests.a */; };
+		FD4D14F421C66DD862FC6DFB /* libPods-CongressionalAppChallengeCli-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4745DCF86976EED93FB9D976 /* libPods-CongressionalAppChallengeCli-tvOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,33 +40,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		006758536D3484BA1BD9907D /* libPods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00E356EE1AD99517003FC87E /* CongressionalAppChallengeCliTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CongressionalAppChallengeCliTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* CongressionalAppChallengeCliTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CongressionalAppChallengeCliTests.m; sourceTree = "<group>"; };
-		12C85FA52FE1301EB6600714 /* Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.debug.xcconfig"; path = "Target Support Files/Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests/Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.debug.xcconfig"; sourceTree = "<group>"; };
+		053C8546DF77C4F5DAD307BB /* libPods-CongressionalAppChallengeCli.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CongressionalAppChallengeCli.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11588DD388CFF2CE4961C371 /* Pods-CongressionalAppChallengeCli-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CongressionalAppChallengeCli-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-CongressionalAppChallengeCli-tvOSTests/Pods-CongressionalAppChallengeCli-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* CongressionalAppChallengeCli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CongressionalAppChallengeCli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = CongressionalAppChallengeCli/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = CongressionalAppChallengeCli/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = CongressionalAppChallengeCli/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CongressionalAppChallengeCli/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = CongressionalAppChallengeCli/main.m; sourceTree = "<group>"; };
-		26DEABAE9F6819E8E076A870 /* Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.release.xcconfig"; path = "Target Support Files/Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests/Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.release.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* CongressionalAppChallengeCli-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CongressionalAppChallengeCli-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* CongressionalAppChallengeCli-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CongressionalAppChallengeCli-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7ED93ABB46A6A76FD7AF34BE /* libPods-CongressionalAppChallengeCli-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CongressionalAppChallengeCli-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4745DCF86976EED93FB9D976 /* libPods-CongressionalAppChallengeCli-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CongressionalAppChallengeCli-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		608330C791791ECB0D6F6B3E /* Pods-CongressionalAppChallengeCli-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CongressionalAppChallengeCli-tvOS.release.xcconfig"; path = "Target Support Files/Pods-CongressionalAppChallengeCli-tvOS/Pods-CongressionalAppChallengeCli-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		61ACAA15345C08981D867ED3 /* Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.debug.xcconfig"; path = "Target Support Files/Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests/Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7146622AB54356BAF5AF1750 /* libPods-CongressionalAppChallengeCli-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CongressionalAppChallengeCli-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = CongressionalAppChallengeCli/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		86F792B11120A0701C26B1B1 /* libPods-CongressionalAppChallengeCli.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CongressionalAppChallengeCli.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		98E639C17507476A0B476440 /* Pods-CongressionalAppChallengeCli-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CongressionalAppChallengeCli-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-CongressionalAppChallengeCli-tvOS/Pods-CongressionalAppChallengeCli-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		C10E57410807235B3143DFAF /* libPods-CongressionalAppChallengeCli-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CongressionalAppChallengeCli-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C5BB7E03CE7D6DEC1C86D237 /* Pods-CongressionalAppChallengeCli-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CongressionalAppChallengeCli-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-CongressionalAppChallengeCli-tvOSTests/Pods-CongressionalAppChallengeCli-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		9A9F4CAA7D85BBDEE7751D21 /* Pods-CongressionalAppChallengeCli-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CongressionalAppChallengeCli-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-CongressionalAppChallengeCli-tvOS/Pods-CongressionalAppChallengeCli-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		AB2E6AA9C211451C01B041AD /* libPods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D186BBF15B27091E3E276182 /* Pods-CongressionalAppChallengeCli.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CongressionalAppChallengeCli.debug.xcconfig"; path = "Target Support Files/Pods-CongressionalAppChallengeCli/Pods-CongressionalAppChallengeCli.debug.xcconfig"; sourceTree = "<group>"; };
 		DBFA57C29A7976A0E572C664 /* Pods-CongressionalAppChallengeCli.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CongressionalAppChallengeCli.release.xcconfig"; path = "Target Support Files/Pods-CongressionalAppChallengeCli/Pods-CongressionalAppChallengeCli.release.xcconfig"; sourceTree = "<group>"; };
-		E4DEFA6FAE8C8D2437B1E6F8 /* Pods-CongressionalAppChallengeCli-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CongressionalAppChallengeCli-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-CongressionalAppChallengeCli-tvOSTests/Pods-CongressionalAppChallengeCli-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		EE52ECA4C9F9D058D3CE4474 /* Pods-CongressionalAppChallengeCli-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CongressionalAppChallengeCli-tvOS.release.xcconfig"; path = "Target Support Files/Pods-CongressionalAppChallengeCli-tvOS/Pods-CongressionalAppChallengeCli-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		F90F75CAD5BE8A624ECDA378 /* Pods-CongressionalAppChallengeCli-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CongressionalAppChallengeCli-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-CongressionalAppChallengeCli-tvOSTests/Pods-CongressionalAppChallengeCli-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC4C8614230A0D97E285807C /* Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.release.xcconfig"; path = "Target Support Files/Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests/Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				199513F92061734C09FB8E49 /* libPods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.a in Frameworks */,
+				47289B98EBD3EC1B43F1DD5A /* libPods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7D56C95F361326E7EFE64F5 /* libPods-CongressionalAppChallengeCli.a in Frameworks */,
+				57B74E714FB733A1E5C78D96 /* libPods-CongressionalAppChallengeCli.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04BB7F3B2857AEFD7413B810 /* libPods-CongressionalAppChallengeCli-tvOS.a in Frameworks */,
+				FD4D14F421C66DD862FC6DFB /* libPods-CongressionalAppChallengeCli-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9082EFF098E80613A2A364EB /* libPods-CongressionalAppChallengeCli-tvOSTests.a in Frameworks */,
+				CA6ED232EE5D599D654E5A82 /* libPods-CongressionalAppChallengeCli-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,10 +141,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				86F792B11120A0701C26B1B1 /* libPods-CongressionalAppChallengeCli.a */,
-				006758536D3484BA1BD9907D /* libPods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.a */,
-				7ED93ABB46A6A76FD7AF34BE /* libPods-CongressionalAppChallengeCli-tvOS.a */,
-				C10E57410807235B3143DFAF /* libPods-CongressionalAppChallengeCli-tvOSTests.a */,
+				053C8546DF77C4F5DAD307BB /* libPods-CongressionalAppChallengeCli.a */,
+				AB2E6AA9C211451C01B041AD /* libPods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.a */,
+				4745DCF86976EED93FB9D976 /* libPods-CongressionalAppChallengeCli-tvOS.a */,
+				7146622AB54356BAF5AF1750 /* libPods-CongressionalAppChallengeCli-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -154,13 +154,14 @@
 			children = (
 				D186BBF15B27091E3E276182 /* Pods-CongressionalAppChallengeCli.debug.xcconfig */,
 				DBFA57C29A7976A0E572C664 /* Pods-CongressionalAppChallengeCli.release.xcconfig */,
-				12C85FA52FE1301EB6600714 /* Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.debug.xcconfig */,
-				26DEABAE9F6819E8E076A870 /* Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.release.xcconfig */,
-				98E639C17507476A0B476440 /* Pods-CongressionalAppChallengeCli-tvOS.debug.xcconfig */,
-				EE52ECA4C9F9D058D3CE4474 /* Pods-CongressionalAppChallengeCli-tvOS.release.xcconfig */,
-				E4DEFA6FAE8C8D2437B1E6F8 /* Pods-CongressionalAppChallengeCli-tvOSTests.debug.xcconfig */,
-				C5BB7E03CE7D6DEC1C86D237 /* Pods-CongressionalAppChallengeCli-tvOSTests.release.xcconfig */,
+				61ACAA15345C08981D867ED3 /* Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.debug.xcconfig */,
+				FC4C8614230A0D97E285807C /* Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.release.xcconfig */,
+				9A9F4CAA7D85BBDEE7751D21 /* Pods-CongressionalAppChallengeCli-tvOS.debug.xcconfig */,
+				608330C791791ECB0D6F6B3E /* Pods-CongressionalAppChallengeCli-tvOS.release.xcconfig */,
+				F90F75CAD5BE8A624ECDA378 /* Pods-CongressionalAppChallengeCli-tvOSTests.debug.xcconfig */,
+				11588DD388CFF2CE4961C371 /* Pods-CongressionalAppChallengeCli-tvOSTests.release.xcconfig */,
 			);
+			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -204,11 +205,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "CongressionalAppChallengeCliTests" */;
 			buildPhases = (
-				0B016607BDBED17607BC271F /* [CP] Check Pods Manifest.lock */,
+				B16F6D96C9DC281191CF45C1 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				CA193611D94A4598F236DE01 /* [CP] Copy Pods Resources */,
+				8FD5C3E5280E62A80F997036 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,7 +246,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "CongressionalAppChallengeCli-tvOS" */;
 			buildPhases = (
-				F9F8103921081441CD3D51F9 /* [CP] Check Pods Manifest.lock */,
+				56482CFB740FBF28BA3F1B67 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -265,7 +266,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "CongressionalAppChallengeCli-tvOSTests" */;
 			buildPhases = (
-				1B17DDF86D0787C81DB7550A /* [CP] Check Pods Manifest.lock */,
+				2D2963601E60AA57A38BC88D /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -376,28 +377,6 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		0B016607BDBED17607BC271F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		1AA5BC8E9116F5DDB5A5039E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -420,7 +399,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1B17DDF86D0787C81DB7550A /* [CP] Check Pods Manifest.lock */ = {
+		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native Code And Images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		2D2963601E60AA57A38BC88D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -442,19 +435,77 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
+		56482CFB740FBF28BA3F1B67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CongressionalAppChallengeCli-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FD5C3E5280E62A80F997036 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests/Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests-resources.sh",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Feather.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Foundation.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
-			name = "Bundle React Native Code And Images";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Feather.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Brands.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Regular.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Solid.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Fontisto.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Foundation.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Ionicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests/Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		A44A8DCCE1685C6B1784210C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -506,57 +557,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CongressionalAppChallengeCli/Pods-CongressionalAppChallengeCli-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CA193611D94A4598F236DE01 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests/Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests-resources.sh",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Feather.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Foundation.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
-				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
-				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Feather.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Brands.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Regular.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Solid.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Fontisto.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Foundation.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Ionicons.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests/Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F9F8103921081441CD3D51F9 /* [CP] Check Pods Manifest.lock */ = {
+		B16F6D96C9DC281191CF45C1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -571,7 +572,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CongressionalAppChallengeCli-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -671,7 +672,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12C85FA52FE1301EB6600714 /* Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.debug.xcconfig */;
+			baseConfigurationReference = 61ACAA15345C08981D867ED3 /* Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -694,7 +695,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26DEABAE9F6819E8E076A870 /* Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.release.xcconfig */;
+			baseConfigurationReference = FC4C8614230A0D97E285807C /* Pods-CongressionalAppChallengeCli-CongressionalAppChallengeCliTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -719,7 +720,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = CongressionalAppChallengeCli/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -742,7 +743,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = CongressionalAppChallengeCli/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -759,7 +759,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98E639C17507476A0B476440 /* Pods-CongressionalAppChallengeCli-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 9A9F4CAA7D85BBDEE7751D21 /* Pods-CongressionalAppChallengeCli-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -787,7 +787,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE52ECA4C9F9D058D3CE4474 /* Pods-CongressionalAppChallengeCli-tvOS.release.xcconfig */;
+			baseConfigurationReference = 608330C791791ECB0D6F6B3E /* Pods-CongressionalAppChallengeCli-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -815,7 +815,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4DEFA6FAE8C8D2437B1E6F8 /* Pods-CongressionalAppChallengeCli-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = F90F75CAD5BE8A624ECDA378 /* Pods-CongressionalAppChallengeCli-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -842,7 +842,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C5BB7E03CE7D6DEC1C86D237 /* Pods-CongressionalAppChallengeCli-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 11588DD388CFF2CE4961C371 /* Pods-CongressionalAppChallengeCli-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
