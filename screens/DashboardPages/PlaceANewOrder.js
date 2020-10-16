@@ -24,19 +24,47 @@ export default class PlaceANewOrder extends Component {
       InvalidDuration: null,
       InvalidTime: null,
       destinationAddress: "",
+      typedTime: "",
       startTime: "",
       duration: "",
+      status: "Not Done",
     };
   }
-  onPress(List) {
+  onPress(List, Value, Status, Time) {
+    const { navigation, isFocused } = this.props;
+    const {
+      state: {
+        params: {
+          navigationConfig: { userInfo },
+        },
+      },
+    } = navigation;
+    const USERID = this.props.navigation.getParam("userId", "value");
     if (List.length != 0) {
-      this.props.navigation.navigate("Dashboard", {
-        List: List,
+      fetch("http://localhost:8080/mongo/insertUserRequest", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          itemsList: List,
+          userId: USERID,
+          orderType: Value,
+          status: Status,
+          completedTime: Time,
+          latitude: userInfo.latitude,
+          longitude: userInfo.longitude,
+        }),
       });
+      this.props.navigation.navigate("Dashboard", { updateDashboard: true });
       return true;
     } else {
       if (List.length == 0) {
         this.setState({ InvalidList: "" });
+      }
+      if (Time.length == 0) {
+        this.setState({ InvalidTime: "" });
       }
     }
   }
@@ -62,6 +90,16 @@ export default class PlaceANewOrder extends Component {
   }
 
   render() {
+    const { navigation, isFocused } = this.props;
+    const {
+      state: {
+        params: {
+          navigationConfig: { userInfo },
+        },
+      },
+    } = navigation;
+    const USERID = this.props.navigation.getParam("userId", "value");
+    console.log("UserInfo", JSON.stringify(userInfo));
     return (
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : null}
@@ -76,13 +114,19 @@ export default class PlaceANewOrder extends Component {
             }}
           >
             <View>
+              <Text style={styles.subheadingStyle}>
+                Name: {JSON.stringify(USERID)}
+              </Text>
+              <Text style={styles.subheadingStyle}>
+                Type of Order: {this.state.value}
+              </Text>
               <Text style={styles.titleStyle}>Place a New Order </Text>
               <Text style={styles.subheadingStyle}>Type of Order:</Text>
               <DropDownPicker
                 items={[
                   {
                     label: "Groceries or picking up anything else",
-                    value: "1",
+                    value: "Picking up Items",
                   },
                   {
                     label:
@@ -105,7 +149,7 @@ export default class PlaceANewOrder extends Component {
                   })
                 }
               />
-              {this.state.value == "1" && (
+              {this.state.value == "Picking up Items" && (
                 <View style={{ marginTop: 30 }}>
                   <Text style={styles.subheadingStyle}>
                     Please type whatever you need below:
@@ -130,6 +174,29 @@ export default class PlaceANewOrder extends Component {
                         return {
                           completedList: text,
                           InvalidList: text,
+                        };
+                      });
+                    }}
+                  />
+                  {this.state.InvalidList == "" &&
+                    this.state.value == "Picking up Items" && (
+                      <Text style={styles.errorText}>
+                        Please type your list into the box
+                      </Text>
+                    )}
+                  <Text style={styles.subheadingStyle}>
+                    Please type when you would like the order to be completed:
+                  </Text>
+                  <TextInput
+                    placeholder="Please type your answer here"
+                    placeholderTextColor="#808080"
+                    keyboardType="email-address"
+                    style={styles.emailstyle}
+                    onChangeText={(text) => {
+                      this.setState((previousState) => {
+                        return {
+                          typedTime: text,
+                          InvalidTime: text,
                         };
                       });
                     }}
@@ -220,15 +287,23 @@ export default class PlaceANewOrder extends Component {
                   }
                 />
               )}
-              {this.state.InvalidList == "" && this.state.value == "1" && (
-                <Text style={styles.errorText}>
-                  Please type your list into the box
-                </Text>
-              )}
-              {this.state.value == "1" && (
+              {this.state.InvalidTime == "" &&
+                this.state.value == "Picking up Items" && (
+                  <Text style={styles.errorText}>
+                    Please type your time into the box
+                  </Text>
+                )}
+              {this.state.value == "Picking up Items" && (
                 <Button
                   title="SUBMIT"
-                  onPress={() => this.onPress(this.state.completedList)}
+                  onPress={() =>
+                    this.onPress(
+                      this.state.completedList,
+                      this.state.value,
+                      this.state.status,
+                      this.state.typedTime
+                    )
+                  }
                 />
               )}
             </View>
@@ -249,6 +324,16 @@ const styles = StyleSheet.create({
     borderBottomColor: "black",
     borderRightWidth: 0,
     borderLeftWidth: 0,
+    borderWidth: 1,
+    padding: 10,
+  },
+  emailstyle: {
+    height: 40,
+    margin: 20,
+    borderTopWidth: 1,
+    borderBottomColor: "black",
+    borderRightWidth: 1,
+    borderLeftWidth: 1,
     borderWidth: 1,
     padding: 10,
   },
@@ -287,5 +372,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 0,
     marginTop: 15,
+  },
+  item: {
+    flex: 1,
+    marginHorizontal: 10,
+    marginTop: 24,
+    padding: 30,
+    backgroundColor: "#fffafa",
   },
 });
