@@ -39,7 +39,7 @@ export default class PreviousOrders extends Component {
     //{item.orderDetailList[i].itemDesc}
     const USERID = this.props.navigation.getParam("userId", "value");
     return (
-      <View>
+      <View style={{ backgroundColor: "#f0ffff" }}>
         <FlatList
           data={this.state.data}
           renderItem={({ item }) => (
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     marginTop: 24,
     padding: 30,
-    backgroundColor: "#fffafa",
+    backgroundColor: "#ffffff",
   },
   text: {
     //flex: 1,

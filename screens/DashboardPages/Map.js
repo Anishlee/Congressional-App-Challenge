@@ -8,7 +8,6 @@ import {
   Button,
 } from "react-native";
 import MapView, { Marker, Callout } from "react-native-maps";
-import carImage from "./Images/car.png";
 
 export default class Map extends Component {
   constructor(props) {

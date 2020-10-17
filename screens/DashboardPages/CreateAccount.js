@@ -77,7 +77,8 @@ export default class CreateAccount extends Component {
           usertype: UserType,
         }),
       });
-      this.props.navigation.navigate("LoginPage");
+      this.props.navigation.navigate("Login");
+      console.log("hi");
       return true;
     } else {
       if (Name.length == 0) {
@@ -126,12 +127,14 @@ export default class CreateAccount extends Component {
               Keyboard.dismiss();
             }}
           >
-            <View>
-              <Text style={styles.titleStyle}> Create an Account </Text>
-              <Text style={styles.subheadingStyle}>
+            <View style={{ backgroundColor: "#f0ffff" }}>
+              <Text style={styles.titleStyle}>
                 {" "}
-                Are you signing up to be a user or a volunteer?
+                Create
+                <Text style={styles.titleStyle2}> an </Text>
+                <Text style={styles.titleStyle}>Account </Text>
               </Text>
+              <Text style={styles.subheadingStyle}> User or Volunteer?</Text>
               <DropDownPicker
                 items={[
                   {
@@ -144,10 +147,19 @@ export default class CreateAccount extends Component {
                   },
                 ]}
                 placeholder="Please choose a option below"
-                containerStyle={{ height: 60 }}
+                containerStyle={{
+                  height: 60,
+                  textAlign: "center",
+                  marginBottom: 15,
+                  marginLeft: 20,
+                  marginRight: 20,
+                }}
                 style={({ backgroundColor: "#fafafa" }, { marginTop: 10 })}
                 itemStyle={{
-                  justifyContent: "flex-start",
+                  justifyContent: "center",
+                }}
+                labelStyle={{
+                  textAlign: "center",
                 }}
                 dropDownStyle={
                   ({ backgroundColor: "#fafafa" }, { marginTop: 10 })
@@ -164,7 +176,8 @@ export default class CreateAccount extends Component {
                   Please choose either User or Volunteer
                 </Text>
               )}
-              <Text style={styles.subheadingStyle}> Enter your Name </Text>
+
+              <Text style={styles.subheadingStyle2}> Enter your Name </Text>
               <TextInput
                 placeholder="Please enter your Name"
                 placeholderTextColor="#808080"
@@ -417,20 +430,20 @@ export default class CreateAccount extends Component {
                   },
                 ]}
                 placeholder="Please choose a state below"
-                containerStyle={{ height: 60 }}
-                style={
-                  ({ backgroundColor: "#fafafa" },
-                  { marginTop: 10 },
-                  { marginBottom: 10 })
-                }
-                itemStyle={{
-                  justifyContent: "flex-start",
+                containerStyle={{
+                  height: 50,
+                  textAlign: "center",
+                  marginLeft: 20,
+                  marginRight: 20,
                 }}
-                dropDownStyle={
-                  ({ backgroundColor: "#fafafa" },
-                  { marginTop: 10 },
-                  { marginBottom: 10 })
-                }
+                style={({ marginTop: 10 }, { marginBottom: 0 })}
+                itemStyle={{
+                  justifyContent: "center",
+                }}
+                dropDownStyle={({ marginTop: 10 }, { marginBottom: 0 })}
+                labelStyle={{
+                  textAlign: "center",
+                }}
                 onChangeItem={(item) =>
                   this.setState({
                     typedState: item.value,
@@ -460,7 +473,7 @@ export default class CreateAccount extends Component {
               {this.state.InvalidZipCode == "" && (
                 <Text style={styles.errorText}>Please type a Zip Code</Text>
               )}
-              <Text style={styles.subheadingStyle}>
+              <Text style={styles.subheadingStyle2}>
                 {" "}
                 Enter a Username or Email{" "}
               </Text>
@@ -500,7 +513,7 @@ export default class CreateAccount extends Component {
               {this.state.InvalidPassword == "" && (
                 <Text style={styles.errorText}>Please enter a Password</Text>
               )}
-              <Text style={styles.subheadingStyle}> Enter a Phone Number</Text>
+              <Text style={styles.subheadingStyle2}> Enter a Phone Number</Text>
               <TextInput
                 placeholder="Please enter your phone number (please don't enter dashes)"
                 keyboardType="email-address"
@@ -528,6 +541,7 @@ export default class CreateAccount extends Component {
               )}
               <Button
                 title="Submit"
+                color="#008b8b"
                 onPress={() =>
                   this.onPress(
                     this.state.typedName,
@@ -579,8 +593,24 @@ const styles = StyleSheet.create({
     marginTop: 50,
     marginBottom: 20,
   },
+  titleStyle2: {
+    color: "#008b8b",
+    textAlign: "center",
+    fontWeight: "bold",
+    fontSize: 40,
+    marginTop: 50,
+    marginBottom: 20,
+  },
+
   subheadingStyle: {
     color: "black",
+    textAlign: "center",
+    fontSize: 22.5,
+    fontWeight: "bold",
+    marginBottom: 5,
+  },
+  subheadingStyle2: {
+    color: "#008b8b",
     textAlign: "center",
     fontSize: 22.5,
     fontWeight: "bold",
@@ -594,7 +624,7 @@ const styles = StyleSheet.create({
   },
   errorText2: {
     color: "red",
-    marginLeft: 1,
+    marginLeft: 20,
     fontSize: 15,
     marginBottom: 10,
   },

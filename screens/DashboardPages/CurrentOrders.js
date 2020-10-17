@@ -88,8 +88,11 @@ export default class CurrentOrder extends Component {
     console.log("x", JSON.stringify(this.state.recentOrderDetail));
 
     return (
-      <View>
-        <Text style={styles.titleStyle}> Current Orders: </Text>
+      <View style={{ backgroundColor: "#f0ffff" }}>
+        <Text style={styles.titleStyle}>
+          Current
+          <Text style={styles.titleStyle2}> Orders: </Text>
+        </Text>
         <FlatList
           data={this.state.recentOrderDetail}
           keyExtractor={(item) => item.orderNumber}
@@ -169,11 +172,20 @@ export default class CurrentOrder extends Component {
             }
           }}
         />
+        <Text style={{ marginBottom: 700 }}></Text>
       </View>
     );
   }
 }
 const styles = StyleSheet.create({
+  titleStyle2: {
+    color: "#008b8b",
+    textAlign: "center",
+    fontWeight: "bold",
+    fontSize: 40,
+    marginTop: 50,
+    marginBottom: 20,
+  },
   titleStyle: {
     color: "black",
     textAlign: "center",
@@ -187,7 +199,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 0,
     marginTop: 24,
     padding: 30,
-    backgroundColor: "#fffafa",
+    backgroundColor: "#ffffff",
   },
   text: {
     //flex: 1,

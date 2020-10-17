@@ -100,8 +100,11 @@ class Dashboard extends Component {
     // console.log(recentOrderDetail.length == 0);
     console.log("userInfoz", JSON.stringify(userInfo));
     return (
-      <View>
-        <Text style={styles.titleStyle}>Hello, {userInfo.name}</Text>
+      <View style={{ backgroundColor: "#f0ffff" }}>
+        <Text style={styles.titleStyle}>
+          Hello,
+          <Text style={styles.titleStyle2}> {userInfo.name}</Text>
+        </Text>
         <Text style={styles.subheadingStyle}> Recent Order: </Text>
         {recentOrderDetail != undefined && (
           <FlatList
@@ -163,8 +166,8 @@ class Dashboard extends Component {
               } else if (item.status == "Done") {
                 return (
                   <View style={styles.item}>
-                    <Text style={{ fontSize: 18 }}>
-                      Your Order has been completed!
+                    <Text style={{ fontSize: 18, textAlign: "center" }}>
+                      Your order has been completed!
                     </Text>
                   </View>
                 );
@@ -208,6 +211,7 @@ class Dashboard extends Component {
         )}
         <Button
           style={styles.StyleforButton}
+          color="#008b8b"
           title="Place a New Order"
           onPress={() => {
             this.props.navigation.navigate("PlaceANewOrder", {
@@ -216,8 +220,10 @@ class Dashboard extends Component {
             });
           }}
         />
+        <Text style={{ marginBottom: 25 }}></Text>
         <Button
           style={styles.StyleforButton}
+          color="#008b8b"
           title="Previous Orders"
           onPress={() => {
             this.props.navigation.navigate("PreviousOrders", {
@@ -225,16 +231,28 @@ class Dashboard extends Component {
             });
           }}
         />
+        <Text style={{ marginBottom: 25 }}></Text>
         <Button
+          color="#008b8b"
           style={styles.StyleforButton}
           title="Profile"
           onPress={() => this.props.navigation.navigate("Profile")}
         />
+        <Text style={{ marginBottom: 25 }}></Text>
         <Button
           style={styles.StyleforButton}
+          color="#008b8b"
           title="Settings"
           onPress={() => this.props.navigation.navigate("Settings")}
         />
+        <Text style={{ marginBottom: 25 }}></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
       </View>
     );
   }
@@ -249,11 +267,20 @@ const styles = StyleSheet.create({
     marginTop: 50,
     marginBottom: 20,
   },
+  titleStyle2: {
+    color: "#008b8b",
+    textAlign: "center",
+    fontWeight: "bold",
+    fontSize: 40,
+    marginTop: 50,
+    marginBottom: 20,
+  },
   StyleforButton: {
     alignItems: "center",
     backgroundColor: "#FFFFFF",
     padding: 10,
     fontSize: 20,
+    marginBottom: 50,
   },
   subheadingStyle: {
     color: "black",
@@ -267,7 +294,9 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     marginTop: 24,
     padding: 30,
-    backgroundColor: "#fffafa",
+    backgroundColor: "#ffffff",
+    fontSize: 18,
+    marginBottom: 10,
   },
   item2: {
     flex: 1,

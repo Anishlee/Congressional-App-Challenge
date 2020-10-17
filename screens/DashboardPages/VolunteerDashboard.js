@@ -12,9 +12,13 @@ export default class VolunteerDashboard extends Component {
       },
     } = navigation;
     return (
-      <View>
-        <Text style={styles.titleStyle}>Hello, {userInfo.name}</Text>
+      <View style={{ backgroundColor: "#f0ffff" }}>
+        <Text style={styles.titleStyle}>
+          Hello,
+          <Text style={styles.titleStyle2}> {userInfo.name}</Text>
+        </Text>
         <Button
+          color="#008b8b"
           style={styles.StyleforButton}
           title="Current Orders"
           onPress={() =>
@@ -23,8 +27,10 @@ export default class VolunteerDashboard extends Component {
             })
           }
         />
+        <Text style={{ marginBottom: 25 }}></Text>
         <Button
           style={styles.StyleforButton}
+          color="#008b8b"
           title="Choose Your New Order"
           onPress={() =>
             this.props.navigation.navigate("Map", {
@@ -32,7 +38,9 @@ export default class VolunteerDashboard extends Component {
             })
           }
         />
+        <Text style={{ marginBottom: 25 }}></Text>
         <Button
+          color="#008b8b"
           style={styles.StyleforButton}
           title="Completed Orders"
           onPress={() => {
@@ -41,16 +49,21 @@ export default class VolunteerDashboard extends Component {
             });
           }}
         />
+        <Text style={{ marginBottom: 25 }}></Text>
         <Button
+          color="#008b8b"
           style={styles.StyleforButton}
           title="Profile"
           onPress={() => this.props.navigation.navigate("Profile")}
         />
+        <Text style={{ marginBottom: 25 }}></Text>
         <Button
+          color="#008b8b"
           style={styles.StyleforButton}
           title="Settings"
           onPress={() => this.props.navigation.navigate("Settings")}
         />
+        <Text style={{ marginBottom: 350 }}></Text>
       </View>
     );
   }
@@ -59,6 +72,14 @@ export default class VolunteerDashboard extends Component {
 const styles = StyleSheet.create({
   titleStyle: {
     color: "black",
+    textAlign: "center",
+    fontWeight: "bold",
+    fontSize: 40,
+    marginTop: 50,
+    marginBottom: 120,
+  },
+  titleStyle2: {
+    color: "#008b8b",
     textAlign: "center",
     fontWeight: "bold",
     fontSize: 40,

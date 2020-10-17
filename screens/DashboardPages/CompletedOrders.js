@@ -32,8 +32,11 @@ export default class CompletedOrders extends Component {
 
   render() {
     return (
-      <View>
-        <Text style={styles.titleStyle}> Completed Orders </Text>
+      <View style={{ backgroundColor: "#f0ffff" }}>
+        <Text style={styles.titleStyle}>
+          Completed
+          <Text style={styles.titleStyle2}> Orders: </Text>
+        </Text>
         <FlatList
           data={this.state.data}
           keyExtractor={(item) => item.orderNumber}
@@ -85,12 +88,20 @@ const styles = StyleSheet.create({
     marginTop: 50,
     marginBottom: 20,
   },
+  titleStyle2: {
+    color: "#008b8b",
+    textAlign: "center",
+    fontWeight: "bold",
+    fontSize: 40,
+    marginTop: 50,
+    marginBottom: 20,
+  },
   item: {
     flex: 1,
     marginHorizontal: 0,
     marginTop: 24,
     padding: 30,
-    backgroundColor: "#fffafa",
+    backgroundColor: "#ffffff",
   },
   text: {
     //flex: 1,

@@ -113,14 +113,13 @@ export default class PlaceANewOrder extends Component {
               Keyboard.dismiss();
             }}
           >
-            <View>
-              <Text style={styles.subheadingStyle}>
-                Name: {JSON.stringify(USERID)}
+            <View style={{ backgroundColor: "#f0ffff" }}>
+              <Text style={styles.titleStyle}>
+                Place
+                <Text style={styles.titleStyle2}> a </Text>
+                <Text style={styles.titleStyle}>New </Text>
+                <Text style={styles.titleStyle2}>Order</Text>
               </Text>
-              <Text style={styles.subheadingStyle}>
-                Type of Order: {this.state.value}
-              </Text>
-              <Text style={styles.titleStyle}>Place a New Order </Text>
               <Text style={styles.subheadingStyle}>Type of Order:</Text>
               <DropDownPicker
                 items={[
@@ -138,11 +137,14 @@ export default class PlaceANewOrder extends Component {
                 containerStyle={{ height: 60 }}
                 style={({ backgroundColor: "#fafafa" }, { marginTop: 10 })}
                 itemStyle={{
-                  justifyContent: "flex-start",
+                  justifyContent: "center",
                 }}
                 dropDownStyle={
                   ({ backgroundColor: "#fafafa" }, { marginTop: 10 })
                 }
+                labelStyle={{
+                  textAlign: "center",
+                }}
                 onChangeItem={(item) =>
                   this.setState({
                     value: item.value,
@@ -151,7 +153,7 @@ export default class PlaceANewOrder extends Component {
               />
               {this.state.value == "Picking up Items" && (
                 <View style={{ marginTop: 30 }}>
-                  <Text style={styles.subheadingStyle}>
+                  <Text style={styles.subheadingStyle2}>
                     Please type whatever you need below:
                   </Text>
                   <TextInput
@@ -160,13 +162,13 @@ export default class PlaceANewOrder extends Component {
                     placeholderTextColor="black"
                     multiline={true}
                     borderBottomColor="black"
-                    borderBottomWidth={0.5}
+                    borderBottomWidth={1}
                     borderLeftColor="black"
-                    borderLeftWidth={0.5}
+                    borderLeftWidth={1}
                     borderRightColor="black"
-                    borderRightWidth={0.5}
+                    borderRightWidth={1}
                     borderTopColor="black"
-                    borderTopWidth={0.5}
+                    borderTopWidth={1}
                     returnKeyType="done"
                     numberOfLines={2000}
                     onChangeText={(text) => {
@@ -185,11 +187,11 @@ export default class PlaceANewOrder extends Component {
                       </Text>
                     )}
                   <Text style={styles.subheadingStyle}>
-                    Please type when you would like the order to be completed:
+                    Please enter suitable order completion time:
                   </Text>
                   <TextInput
                     placeholder="Please type your answer here"
-                    placeholderTextColor="#808080"
+                    placeholderTextColor="#000000"
                     keyboardType="email-address"
                     style={styles.emailstyle}
                     onChangeText={(text) => {
@@ -294,8 +296,25 @@ export default class PlaceANewOrder extends Component {
                   </Text>
                 )}
               {this.state.value == "Picking up Items" && (
+                <View>
+                  <Text style={styles.subheadingStyle2}>
+                    Charge for the above listed items will be charged against
+                    the credit card on file. Please acknowledge.
+                  </Text>
+                  <View style={{ flexDirection: "row" }}>
+                    <View style={{ flex: 1 }}>
+                      <Button title="Yes" />
+                    </View>
+                    <View style={{ flex: 1 }}>
+                      <Button title="No" color="red" />
+                    </View>
+                  </View>
+                </View>
+              )}
+
+              {this.state.value == "Picking up Items" && (
                 <Button
-                  title="SUBMIT"
+                  title="Submit"
                   onPress={() =>
                     this.onPress(
                       this.state.completedList,
@@ -306,6 +325,7 @@ export default class PlaceANewOrder extends Component {
                   }
                 />
               )}
+              <Text style={{ marginBottom: 650 }}></Text>
             </View>
           </TouchableWithoutFeedback>
         </ScrollView>
@@ -345,8 +365,23 @@ const styles = StyleSheet.create({
     marginTop: 30,
     marginBottom: 20,
   },
+  titleStyle2: {
+    color: "#008b8b",
+    textAlign: "center",
+    fontWeight: "bold",
+    fontSize: 40,
+    marginTop: 30,
+    marginBottom: 20,
+  },
   subheadingStyle: {
     color: "black",
+    textAlign: "center",
+    fontSize: 22.5,
+    fontWeight: "bold",
+    marginBottom: 7.5,
+  },
+  subheadingStyle2: {
+    color: "#008b8b",
     textAlign: "center",
     fontSize: 22.5,
     fontWeight: "bold",

@@ -15,7 +15,7 @@ Credentials = [
     type: "Volunteer",
   },
 ];
-export default class LoginPage extends Component {
+export default class Login extends Component {
   state = {
     isLoading: true,
   };
@@ -101,9 +101,12 @@ export default class LoginPage extends Component {
     };
     Credentials.push(NAME, newCredentials);
     return (
-      <View>
-        <Text style={styles.titleStyle}>User Login</Text>
-        <Text style={styles.subheadingStyle}>Username or Email</Text>
+      <View style={{ backgroundColor: "#f0ffff" }}>
+        <Text style={styles.titleStyle}>
+          Login
+          <Text style={styles.titleStyle2}> Page </Text>
+        </Text>
+        <Text style={styles.subheadingStyle2}>Username or Email:</Text>
         <TextInput
           style={styles.emailstyle}
           keyboardType="email-address"
@@ -127,7 +130,8 @@ export default class LoginPage extends Component {
         {this.state.inValidUser === "" && (
           <Text style={styles.errorText}>Your credentials are incorrect</Text>
         )}
-        <Text style={styles.subheadingStyle}>Password</Text>
+        <Text style={{ marginBottom: 95 }}></Text>
+        <Text style={styles.subheadingStyle}>Password:</Text>
         <TextInput
           style={styles.passwordstyle}
           keyboardType="email-address"
@@ -152,28 +156,52 @@ export default class LoginPage extends Component {
         {this.state.inValidUser === "" && (
           <Text style={styles.errorText}>Your credentials are incorrect</Text>
         )}
-        <Button
-          title="Submit"
-          onPress={() =>
-            this.checkForCredentials(
-              this.state.typedText,
-              this.state.typedPassword
-            )
-          }
-        ></Button>
+        <Text style={{ marginBottom: 95 }}></Text>
+        <View style={{ fontSize: 30 }}>
+          <Button
+            title="Submit"
+            color="#008b8b"
+            onPress={() =>
+              this.checkForCredentials(
+                this.state.typedText,
+                this.state.typedPassword
+              )
+            }
+          ></Button>
+        </View>
         <View style={styles.ButtonContainer}>
           <Text style={{ fontSize: 18, marginRight: 10 }}> New to app? </Text>
           <Button
             title="Create an account"
+            color="#008b8b"
             onPress={() => this.props.navigation.navigate("CreateAccount")}
           />
         </View>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  headerStyle: {
+    backgroundColor: "#008b8b",
+  },
   emailstyle: {
     height: 40,
     margin: 20,
@@ -183,6 +211,7 @@ const styles = StyleSheet.create({
     borderLeftWidth: 0,
     borderWidth: 1,
     padding: 10,
+    marginBottom: 10,
   },
   passwordstyle: {
     height: 40,
@@ -193,6 +222,7 @@ const styles = StyleSheet.create({
     borderLeftWidth: 0,
     borderWidth: 1,
     padding: 10,
+    marginBottom: 10,
   },
   titleStyle: {
     color: "black",
@@ -200,9 +230,24 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 40,
     marginTop: 50,
-    marginBottom: 20,
+    marginBottom: 105,
+  },
+  titleStyle2: {
+    color: "#008b8b",
+    textAlign: "center",
+    fontWeight: "bold",
+    fontSize: 40,
+    marginTop: 50,
+    marginBottom: 105,
   },
   subheadingStyle: {
+    color: "#008b8b",
+    textAlign: "center",
+    fontSize: 22.5,
+    fontWeight: "bold",
+    marginBottom: 5,
+  },
+  subheadingStyle2: {
     color: "black",
     textAlign: "center",
     fontSize: 22.5,
@@ -218,9 +263,9 @@ const styles = StyleSheet.create({
   },
   errorText: {
     color: "red",
-    marginTop: -1,
+    marginTop: 0,
     marginLeft: 20,
     fontSize: 15,
-    marginBottom: 10,
+    marginBottom: 0,
   },
 });
