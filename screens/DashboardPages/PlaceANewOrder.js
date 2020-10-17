@@ -297,24 +297,19 @@ export default class PlaceANewOrder extends Component {
                 )}
               {this.state.value == "Picking up Items" && (
                 <View>
-                  <Text style={styles.subheadingStyle2}>
-                    Charge for the above listed items will be charged against
-                    the credit card on file. Please acknowledge.
+                  <Text style={styles.subheadingStyle3}>
+                    Disclaimer: Charge for the above listed items will be
+                    charged against the credit card on file.
                   </Text>
-                  <View style={{ flexDirection: "row" }}>
-                    <View style={{ flex: 1 }}>
-                      <Button title="Yes" />
-                    </View>
-                    <View style={{ flex: 1 }}>
-                      <Button title="No" color="red" />
-                    </View>
-                  </View>
                 </View>
               )}
-
+              {this.state.value == "Picking up Items" && (
+                <Text style={{ marginBottom: 50 }}></Text>
+              )}
               {this.state.value == "Picking up Items" && (
                 <Button
                   title="Submit"
+                  color="#008b8b"
                   onPress={() =>
                     this.onPress(
                       this.state.completedList,
@@ -385,6 +380,13 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 22.5,
     fontWeight: "bold",
+    marginBottom: 7.5,
+  },
+  subheadingStyle3: {
+    color: "#008b8b",
+    textAlign: "center",
+    fontSize: 16,
+    fontWeight: "normal",
     marginBottom: 7.5,
   },
   errorText: {

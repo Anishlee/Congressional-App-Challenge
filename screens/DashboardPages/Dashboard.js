@@ -6,6 +6,7 @@ import {
   StyleSheet,
   Button,
   FlatList,
+  LogBox,
 } from "react-native";
 import { withNavigationFocus } from "react-navigation";
 
@@ -19,7 +20,6 @@ class Dashboard extends Component {
       check: "",
     };
   }
-
   componentDidUpdate(prevProps) {
     const { navigation, isFocused } = this.props;
     const {
@@ -82,6 +82,7 @@ class Dashboard extends Component {
     console.log("xy", this.state.updateOrder);
   }
   render() {
+    LogBox.ignoreAllLogs();
     const { fetching, recentOrderDetail } = this.state;
     const { navigation } = this.props;
     const {
