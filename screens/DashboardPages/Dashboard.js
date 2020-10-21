@@ -205,10 +205,12 @@ class Dashboard extends Component {
           />
         )}
         {recentOrderDetail.length == 0 && (
-          <Text style={styles.item2}>
-            {" "}
-            Your most recent order will go here{" "}
-          </Text>
+          <View>
+            <Text style={styles.item2}>
+              {" "}
+              Your most recent order will go here{" "}
+            </Text>
+          </View>
         )}
         <Button
           style={styles.StyleforButton}
@@ -246,14 +248,7 @@ class Dashboard extends Component {
           title="Settings"
           onPress={() => this.props.navigation.navigate("Settings")}
         />
-        <Text style={{ marginBottom: 25 }}></Text>
-        <Text></Text>
-        <Text></Text>
-        <Text></Text>
-        <Text></Text>
-        <Text></Text>
-        <Text></Text>
-        <Text></Text>
+        <Text style={{ marginBottom: 800 }}></Text>
       </View>
     );
   }
@@ -304,9 +299,13 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     marginTop: 24,
     textAlign: "center",
+    textAlignVertical: "center",
+    justifyContent: "center",
     padding: 30,
     backgroundColor: "#fffafa",
     fontSize: 18,
+    alignItems: "stretch",
+    flexDirection: "row",
   },
   item3: {
     flex: 1,
